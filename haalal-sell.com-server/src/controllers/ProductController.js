@@ -125,13 +125,13 @@ exports.createProduct = async (req, res) => {
 
 // Update Product
 exports.updateProduct = async (req, res) => {
-  const { productID, name, description, price, image, brand, category, Stock } = req.body;
+  const { productID, title, shortDes, price, image, brand, category, Stock } = req.body;
 try{
   const product = await ProductModel.findByIdAndUpdate(
     productID,
     {
-      name,
-      description,
+      title,
+      shortDes,
       price,
       image,
       brand,

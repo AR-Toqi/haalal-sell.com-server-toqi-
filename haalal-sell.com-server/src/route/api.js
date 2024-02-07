@@ -23,6 +23,12 @@ router.get("/ListByBrand/:brandID", ProductController.ListByBrand);
 router.get("/ListByKeyword/:keyword", ProductController.ListByKeyword);
 router.get("/ListReview", ProductController.ListReview);
 router.get("/ProductDetails/:id", ProductController.ProductDetails);
+
+// product CRUD
+router.post("/CreateProduct", ProductController.createProduct);
+router.put("/UpdateProduct/:id", ProductController.updateProduct);
+router.delete("/DeleteProduct/:id", ProductController.deleteProduct);
+
 // router.post("/ProductDetails", ProductController.CreateProductDetails);
 router.get("/ListByRemark/:remark", ProductController.ListByRemark);
 router.get("/SuggestionProducts", ProductController.AllProductsList);
